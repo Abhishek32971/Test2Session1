@@ -16,32 +16,35 @@ void init_array(int n, int a[n])
 void erotosthenes_sieve(int n, int a[n])
 {
     
-    for (int i=0;i<n;i++)
+    for (int i=1;i<=n;i++)
     {
-      if (a[i]%2==0)
-       {
-         a[i]=0;
-       }
-      if (a[i]%3==0)
-       {
-         a[i]=0;
-       }
-      if (a[i]%5==0)
+      for (int k=2;k<a[i];k++)
+        {
+          if (a[i]%k==0)
+          {
+            a[i]=0;
+            break;
+          }
+        }
+    }
+}
+void out_put(int n, int a[n])
+{
+  for (int i=1;i<n;i++)
+    {
+      if (a[i]!=0)
       {
-        a[i]=0;
-      }
-      if (a[i]%7==0)
-      {
-        a[i]=0;
+        printf("%d\n",a[i]);
       }
     }
-    for (int i=0;i<n;i++)
-      {
-        if (a[i]==0)
-        {
-          for ()
-          
-        }
-      }
 }
-void out_put(int n, int a[n]);
+int main()
+{
+  int n;
+  n=input_array_size();
+  int a[n];
+  init_array(n,a);
+  erotosthenes_sieve(n,a);
+  out_put(n,a);
+  return 0;
+}
