@@ -15,7 +15,6 @@ void init_array(int n, int a[n])
 }
 void erotosthenes_sieve(int n, int a[n])
 {
-    
     for (int i=1;i<=n;i++)
     {
       for (int k=2;k<a[i];k++)

@@ -11,21 +11,19 @@ int find_fibo(int n)
   int i,j,k,f;
   for (i=0,j=1,k=0;k<n-2;k++)
       {
-        if (n==1)
+        f=(i+j);
+        i=j;
+        j=f;
+
+      }
+  if (n==1)
         {
           f=0;
         }
-        else if(n==2)
+  else if(n==2)
         {
           f=1;
         }
-        else
-        {
-          f=(i+j);
-          i=j;
-          j=f;
-        }
-      }
   return f;
 }
 void output(int n, int f)

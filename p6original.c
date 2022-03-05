@@ -8,15 +8,15 @@ void input_two_string(char *string,char *substring)
 int str_index(char *string, char *substring)
 {
   int i,k,n;
-    for (i=0;substring[i]!='\0';)
+    for (i=0;substring[i]!='\0';)//world'\0'
       {
-        for (k=0;string[k]!='\0';)
+        for (k=0;string[k]!='\0';)//helloworldhello
           {
             if (string[k]==substring[i])
             {
               i++;
               k++;
-              n=k-strlen(substring);
+              n=k-strlen(substring);//n=10-5->5
             }
             else 
             {
